@@ -15,6 +15,10 @@ jobs:
           cache: 'gradle'
       - name: Build the app
         run: ./gradlew build
+      - name: Show Lint errors
+        if: failure()
+        run: |
+          find app/build/intermediates/lint_intermediate_text_report -name 'lint-results-*.txt' -exec grep -H 'Error:' {} + || true
       - uses: actions/upload-artifact@v4
         with:
           name: apk
