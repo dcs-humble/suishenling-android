@@ -29,10 +29,10 @@ import java.util.stream.Collectors;
 
 public class VaultRepository {
     public static final String FILENAME = "aegis.json";
-    public static final String FILENAME_PREFIX_EXPORT = "aegis-export";
-    public static final String FILENAME_PREFIX_EXPORT_PLAIN = "aegis-export-plain";
-    public static final String FILENAME_PREFIX_EXPORT_URI = "aegis-export-uri";
-    public static final String FILENAME_PREFIX_EXPORT_HTML = "aegis-export-html";
+    public static final String FILENAME_PREFIX_EXPORT = "suishenling-export";
+    public static final String FILENAME_PREFIX_EXPORT_PLAIN = "suishenling-export-plain";
+    public static final String FILENAME_PREFIX_EXPORT_URI = "suishenling-export-uri";
+    public static final String FILENAME_PREFIX_EXPORT_HTML = "suishenling-export-html";
 
     @NonNull
     private final Vault _vault;

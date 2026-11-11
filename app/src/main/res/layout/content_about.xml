@@ -32,7 +32,7 @@
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_gravity="center_vertical"
-                    android:src="@mipmap/ic_launcher"
+                    android:src="@mipmap/ic_suishenling"
                     tools:ignore="ContentDescription" />
 
                 <TextView
@@ -158,7 +158,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/github"
+                        android:text="@string/upstream_project"
                         android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
                     <TextView
@@ -454,48 +454,6 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="?android:textColorSecondary" />
 
-            <LinearLayout
-                android:id="@+id/btn_rate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="?attr/selectableItemBackground"
-                android:clickable="true"
-                android:gravity="center_vertical"
-                android:minHeight="@dimen/list_item_height"
-                android:orientation="horizontal"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:focusable="true">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:importantForAccessibility="no"
-                    android:src="@drawable/ic_outline_star_24" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="28dp"
-                    android:orientation="vertical"
-                    android:paddingTop="8dp"
-                    android:paddingBottom="8dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/support_rate"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/support_rate_description"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                </LinearLayout>
-
-            </LinearLayout>
 
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>

@@ -35,6 +35,7 @@ import com.beemdevelopment.aegis.R;
 import com.beemdevelopment.aegis.helpers.EditTextHelper;
 import com.beemdevelopment.aegis.helpers.PasswordStrengthHelper;
 import com.beemdevelopment.aegis.helpers.SimpleTextWatcher;
+import com.beemdevelopment.aegis.importers.AegisImporter;
 import com.beemdevelopment.aegis.importers.DatabaseImporter;
 import com.beemdevelopment.aegis.ui.tasks.KeyDerivationTask;
 import com.beemdevelopment.aegis.vault.VaultEntry;
@@ -518,7 +519,11 @@ public class Dialogs {
 
         int i = 0;
         if (!isDirect) {
-            i = names.indexOf(context.getString(R.string.app_name));
+            i = importers.stream()
+                    .filter(importer -> importer.getType() == AegisImporter.class)
+                    .findFirst()
+                    .map(importers::indexOf)
+                    .orElse(0);
         }
         View view = LayoutInflater.from(context).inflate(R.layout.dialog_importers, null);
         TextView helpText = view.findViewById(R.id.text_importer_help);

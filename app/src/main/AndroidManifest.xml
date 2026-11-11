@@ -26,8 +26,8 @@
         android:dataExtractionRules="@xml/backup_rules"
         android:backupAgent=".AegisBackupAgent"
         android:enableOnBackInvokedCallback="true"
-        android:icon="@mipmap/${iconName}"
-        android:label="Aegis"
+        android:icon="@mipmap/ic_suishenling"
+        android:label="@string/app_name"
         android:supportsRtl="true"
         android:largeHeap="true"
         android:theme="@style/Theme.Aegis.Launch"
@@ -42,8 +42,7 @@
             android:label="@string/title_activity_import_entries" />
         <activity
             android:name=".ui.MainActivity"
-            android:exported="true"
-            android:label="${title}">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -108,7 +107,7 @@
         <service
             android:name=".services.LaunchAppTileService"
             android:label="@string/tile_open_vault"
-            android:icon="@drawable/ic_aegis_quicksettings"
+            android:icon="@drawable/ic_suishenling_mark"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
             android:exported="true">
             <intent-filter>
@@ -121,7 +120,7 @@
         <service
             android:name=".services.LaunchScannerTileService"
             android:label="@string/tile_open_scanner"
-            android:icon="@drawable/ic_aegis_quicksettings"
+            android:icon="@drawable/ic_suishenling_mark"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
             android:exported="true">
             <intent-filter>

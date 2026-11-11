@@ -32,7 +32,6 @@ public class AboutActivity extends AegisActivity {
 
     private static String MAIL_BEEMDEVELOPMENT = "beemdevelopment@gmail.com";
     private static String WEBSITE_BEEMDEVELOPMENT = "https://beem.dev/";
-    private static String PLAYSTORE_BEEMDEVELOPMENT = "https://play.google.com/store/apps/details?id=com.beemdevelopment.aegis";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,9 +84,6 @@ public class AboutActivity extends AegisActivity {
 
         View btnWebsite = findViewById(R.id.btn_website);
         btnWebsite.setOnClickListener(v -> openUrl(WEBSITE_BEEMDEVELOPMENT));
-
-        View btnRate = findViewById(R.id.btn_rate);
-        btnRate.setOnClickListener(v -> openUrl(PLAYSTORE_BEEMDEVELOPMENT ));
 
         View btnChangelog = findViewById(R.id.btn_changelog);
         btnChangelog.setOnClickListener(v -> {

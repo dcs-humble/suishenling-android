@@ -42,8 +42,7 @@ public class SecurityPickerSlide extends SlideFragment {
     }
 
     /**
-     * Updates the status of the biometrics option. Auto-selects the biometrics option
-     * if the API version is new enough, permission is granted and a scanner is found.
+     * Defaults to encrypted storage with biometric or password unlock.
      */
     private void updateBiometricsOption(boolean autoSelect) {
         boolean canUseBio = BiometricsHelper.isAvailable(requireContext());
@@ -54,8 +53,8 @@ public class SecurityPickerSlide extends SlideFragment {
             _buttonGroup.check(R.id.rb_password);
         }
 
-        if (canUseBio && autoSelect) {
-            _buttonGroup.check(R.id.rb_biometrics);
+        if (autoSelect) {
+            _buttonGroup.check(canUseBio ? R.id.rb_biometrics : R.id.rb_password);
         }
     }
 

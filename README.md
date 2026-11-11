@@ -1,3 +1,24 @@
+# 随身令 · Suishenling
+
+随身令是一款免费的安卓双重验证器，离线生成 TOTP 和 HOTP，无需注册。支持二维码、手输密钥、密码或指纹解锁，以及加密备份与恢复。
+
+- 安卓包名为 `cn.suishenling.authenticator`，调试包带 `.debug` 后缀。
+- 可从 Aegis 的 JSON 导出或备份迁移。自动备份文件使用独立前缀，以便和原版共用同一目录。
+- 新安装默认推荐加密保险库。安卓系统备份可在设置中主动开启。
+- 基于 [Aegis v3.4.3](https://github.com/beemdevelopment/Aegis/tree/v3.4.3)，保留上游作者署名，按 [GPLv3](LICENSE) 发布。
+
+## 本地构建
+
+需要 Git、JDK 17 和 Android SDK 36。在 Windows 上构建时，将项目放在全英文路径下。通过 Android Studio 打开本目录，或设置 `JAVA_HOME` 与 `ANDROID_HOME` 后运行 Gradle Wrapper。
+
+```powershell
+.\gradlew.bat :app:testReleaseUnitTest :app:assembleRelease
+```
+
+构建出的未签名 APK 位于 `app/build/outputs/apk/release/`。安装分发前使用自己的发布密钥签名，并向接收者提供对应源码。
+
+## 上游项目说明
+
 <img align="left" width="80" height="80" src="metadata/en-US/images/icon.png"
 alt="App icon">
 

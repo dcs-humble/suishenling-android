@@ -39,7 +39,7 @@ public class VaultBackupManager {
     private static final StrictDateFormat _dateFormat =
             new StrictDateFormat("yyyyMMdd-HHmmss", Locale.ENGLISH);
 
-    public static final String FILENAME_PREFIX = "aegis-backup";
+    public static final String FILENAME_PREFIX = "suishenling-backup";
     public static final String FILENAME_SINGLE = String.format("%s.json", FILENAME_PREFIX);
 
     private final Context _context;
