@@ -9,7 +9,7 @@
 
 ## 本地构建
 
-需要 Git、JDK 17 和 Android SDK 36。在 Windows 上构建时，将项目放在全英文路径下。通过 Android Studio 打开本目录，或设置 `JAVA_HOME` 与 `ANDROID_HOME` 后运行 Gradle Wrapper。
+需要 Git 和 Android SDK 36。打包可使用 JDK 17，运行基于 Android 36 的 Robolectric 单元测试需使用 JDK 21。在 Windows 上构建时，将项目放在全英文路径下。通过 Android Studio 打开本目录，或设置 `JAVA_HOME` 与 `ANDROID_HOME` 后运行 Gradle Wrapper。
 
 ```powershell
 .\gradlew.bat :app:testReleaseUnitTest :app:assembleRelease
